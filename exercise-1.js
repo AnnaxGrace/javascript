@@ -51,10 +51,14 @@
 
         //your code...
         function canVote(age) {
-            return false;
+            if (age >= 21) {
+                return true;
+            } else {
+                return false; 
+            }
         }
 
-
+        // console.log(canVote(22));
 
 
 
@@ -64,9 +68,12 @@
         // Write a function that converts a string to an array. It should return an array.  
 
         //your code...
-        function strToArr() {
-            return [];
+        function strToArr(string) {
+            const arr = string.split("");
+            return arr;
         }
+
+        // console.log(strToArr("Party"));
 
 
 
@@ -79,8 +86,18 @@
 
         //your code...
         function reversePhone(number) {
-            
+            const numString = number.toString();
+            const numArr = numString.split("");
+            const reversedArr = [];
+            for (let i = numArr.length - 1; i > -1; i--) {
+                reversedArr.push(numArr[i])
+            }
+            const reversedStr = reversedArr.join("");
+            const reversedNumber = parseInt(reversedStr);
+            return reversedNumber;
         }
+
+        // console.log(reversePhone(8323306225));
 
 
 
@@ -92,8 +109,17 @@
         //your code...
 
 
+        function yourCar(make, model, year, color) {
+            const car = {
+                make,
+                model: model,
+                year,
+                color: color
+            }
+            return car;
+        }
 
-
+        console.log(yourCar("Hyundai", "Elantra", "2013", "red"))
 
 
         /************************************************************************************/
