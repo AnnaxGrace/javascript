@@ -215,16 +215,14 @@ console.log(secondNum(firstNum()));
 // 125
 // undefined
 // ""
-
 // if (){
 //     console.log(true);
 // } else {
 //     console.log(false)
 // }
-
+//ANNA
 console.log(
-  20 +
-    " is truthy, because it is a number, and they are true in logical operations!"
+  `${20} is truthy, because it is a number, and they are true in logical operations!`
 );
 console.log(
   0 + " is falsy, because the number zero is defined as one of the falsy values"
@@ -853,8 +851,8 @@ const keyObj = {
   company: "TEKsystems"
 }
 const mapObj = new Map();
-// mapObj.set({company: "TEKsystems"}, "object");
-mapObj.set(keyObj, "object");
+mapObj.set({company: "TEKsystems"}, "object");
+// mapObj.set(keyObj, "object");
 mapObj.set(72, "number");
 mapObj.set("Party", "string");
 mapObj.set([1, 2, 3], "array");
@@ -919,7 +917,7 @@ const stockGain = basis => {
   const message = " is how much the stock has increased";
   const inner = yrs => {
     const r = .05;
-    return yrs * r;
+    return yrs/r;
   }
   console.log((basis - inner(5)) + message);
 }
@@ -928,7 +926,7 @@ const stockGain = basis => {
 
 //your code...
 const futureValue = () => {
-  stockGain(5000)
+  stockGain(5000);
 }
 
 futureValue()
