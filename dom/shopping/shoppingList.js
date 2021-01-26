@@ -38,4 +38,12 @@
     
     
     
-    10. Finally, use the focus() method to focus the input element ready for entering the next shopping list item.
+    10. Finally, use the focus() method to focus the input element ready for entering the next shopping list item. */
+
+    const ulEl = document.querySelector("ul")
+    const inputEl = document.querySelector("input")
+    const buttonEl = document.querySelector("button")
+
+    buttonEl.addEventListener("click", function (){
+        console.log("button yay!")
+    })

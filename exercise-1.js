@@ -136,7 +136,6 @@ const foodArray = [
   "chocolate",
   "pudding",
   { program: "TEKcamp" },
-  { program: "yay"}
 ];
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
 const school = foodArray[foodArray.length - 1];
