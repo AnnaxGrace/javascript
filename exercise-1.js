@@ -851,20 +851,21 @@ const keyObj = {
   company: "TEKsystems"
 }
 const mapObj = new Map();
-mapObj.set({company: "TEKsystems"}, "object");
-// mapObj.set(keyObj, "object");
+// mapObj.set({company: "TEKsystems"}, "object");
+mapObj.set(keyObj, "object");
 mapObj.set(72, "number");
 mapObj.set("Party", "string");
 mapObj.set([1, 2, 3], "array");
 mapObj.set(true, "boolean");
 console.log(mapObj)
 
-console.log(mapObj.has( { company: "TEKsystems" }));
+// console.log(mapObj.has( { company: "TEKsystems" }));
+console.log(mapObj.has(keyObj));
 
 //The above console.log() statment returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
 
 //your code...
-console.log("The has returns false because at that level it returns just 'object', so it would need to drill down. ex. .has(object: {company: 'TEKsystems'}")
+console.log("The has returns false because at that level it returns just 'object', so it would need to drill down. ex. .has(object: {company: 'TEKsystems'}.")
 
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
 
