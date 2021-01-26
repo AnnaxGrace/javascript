@@ -1,8 +1,8 @@
 const exerciseOne = require('../exercise-1');
 
-test("test", () => {
-    expect(true).toBe(true);
-} );
+// test("test", () => {
+//     expect(true).toBe(true);
+// } );
 
 // Add testing code for all the remaining functions you wrote in the exercise-1.js file
 
@@ -77,20 +77,71 @@ describe("canVote()", () => {
 
 
 // YOUR CODE HERE.  follow the template below to flush out your tests.
+describe("farenheitCelsius()", () => {
 
-describe("your function name ()", () => {
-
-    test("test case #1", () => {
-
+    test("farenheitCelsius() returns converted number from Farenheit to celsius", () => {
+        expect(exerciseOne.farenheitCelsius(212)).toBe(100);
     });
 
-    test("test case #2", () => {
-
+    test("farenheitCelsius returns converted number from Farenheit to celsius", () => {
+        expect(exerciseOne.farenheitCelsius(32)).toBe(0);
     });
 
 })
 
 
+describe("celsiusFarenheit()", () => {
+
+    test("celsiusFarenheit() returns converted number from celsius to farenheit", () => {
+        expect(exerciseOne.celsiusFarenheit(100)).toBe(212);
+    });
+
+    test("celsiusFarenheit() returns converted number from celsius to farenheit", () => {
+        expect(exerciseOne.celsiusFarenheit(0)).toBe(32);
+    });
+
+})
+
+
+describe("strToArr()", () => {
+
+    test("strToArr() returns converted array from string", () => {
+        const string = "Party";
+        const array = ["P", "a", "r", "t", "y"]
+        expect(exerciseOne.strToArr(string)).toEqual(array);
+    });
+
+    test("strToArr() returns converted array from string", () => {
+        expect(exerciseOne.strToArr("yay")).toEqual(["y", "a", "y"]);
+    });
+
+})
+
+describe("reversePhone()", () => {
+
+    test("reversePhone() returns reversed number", () => {
+        expect(exerciseOne.reversePhone(7897)).toBe(7987);
+    });
+
+    test("reversePhone() returns reversed number", () => {
+        expect(exerciseOne.reversePhone(8323306225)).toBe(5226033238);
+    });
+
+})
+
+describe("yourCar()", () => {
+
+    test("yourCar() returns constructed object from given values", () => {
+        const object = {
+            make: "Hyundai",
+            model: "Elantra",
+            year: "2013",
+            color: "red",
+        }
+        expect(exerciseOne.yourCar("Hyundai", "Elantra", "2013", "red")).toEqual(object);
+    });
+
+})
 
 
 

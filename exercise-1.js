@@ -24,17 +24,20 @@ function tekCamp() {
 //your code...
 function farenheitCelsius(farenheitTemp) {
   const celsiusTemp = (farenheitTemp - 32) / 1.8;
-  console.log(celsiusTemp);
+  return celsiusTemp
 }
 
+// console.log(farenheitCelsius(212));
 /************************************************************************************/
 //Write a function that converts the Celsius temperature back to Fahrenheit.
 
 //your code...
 function celsiusFarenheit(celsiusTemp) {
   const farenheitTemp = (celsiusTemp * 9) / 5 + 32;
-  console.log(farenheitTemp);
+  return farenheitTemp;
 }
+
+// console.log(farenheitCelsius(100));
 
 /************************************************************************************/
 // Write a function to determine if someone is old enough to vote.  The function should return a boolean of true or false.
@@ -59,7 +62,7 @@ function strToArr(string) {
   return arr;
 }
 
-// console.log(strToArr("Party"));
+console.log(strToArr("Party"));
 
 /************************************************************************************/
 // Write a function that reverses your telephone number.  It should return the reversed telephone number.
@@ -851,7 +854,6 @@ const keyObj = {
   company: "TEKsystems"
 }
 const mapObj = new Map();
-// mapObj.set({company: "TEKsystems"}, "object");
 mapObj.set(keyObj, "object");
 mapObj.set(72, "number");
 mapObj.set("Party", "string");
@@ -865,7 +867,7 @@ console.log(mapObj.has(keyObj));
 //The above console.log() statment returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
 
 //your code...
-console.log("The has returns false because at that level it returns just 'object', so it would need to drill down. ex. .has(object: {company: 'TEKsystems'}.")
+console.log("The has returns false because objects need to be stored in objects, otherwise they are re-created each time they are called(or defined, depending on the fact that it is infact recreated).")
 
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
 
@@ -936,6 +938,11 @@ futureValue()
 module.exports = {
   tekCamp,
   canVote,
+  farenheitCelsius,
+  celsiusFarenheit,
+  strToArr,
+  reversePhone,
+  yourCar
 };
 
 //*************************************** */
