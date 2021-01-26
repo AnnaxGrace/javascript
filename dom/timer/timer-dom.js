@@ -12,14 +12,12 @@ console.log("time to start the timer!");
     
         if(secondsLeft === 0) {
           clearInterval(timerInterval);
-          sendMessage();
         }
     
       }, 1000);
 
       btnDiv.children[1].addEventListener("click", function () {
         clearInterval(timerInterval)
-        console.log("clicked1?")
     });
 });
 
