@@ -10,13 +10,11 @@ const horizontalLine2 = document.createElement("hr");
 // All elements in center tag 
 const h1Tag = document.createElement("h1");
 const iTagh1 = document.createElement("i");
-iTagh1.innerHTML = "HTML Practice Exercise TEKcamp";
 const h2Tag = document.createElement("h2");
 const aTag = document.createElement("a");
 
-// iTagh1.innerHTML = "HTML Practice Exercise TEKcamp"
+iTagh1.innerHTML = "HTML Practice Exercise TEKcamp"
 h1Tag.append(iTagh1);
-centerTag.append(h1Tag, h2Tag)
 
 aTag.setAttribute("href", "")
 aTag.innerHTML = 'TEKsystems "TEKcamp"'
@@ -24,12 +22,12 @@ h2Tag.append(aTag);
 
 centerTag.append(h1Tag, h2Tag)
 
-
 // All elements in middle section
 const iHTML = document.createElement("i");
 const pTag1 = document.createElement("p");
-pTag1.innerHTML = "I love <i>HTML</i> for the following reasons:"
 const olTag = document.createElement("ol");
+
+pTag1.innerHTML = "I love <i>HTML</i> for the following reasons:"
 
 const listArray =["I learned it quickly", "I can make webpages using code", "It's fun"]
 for (let i = 0; i < 3; i++) {
