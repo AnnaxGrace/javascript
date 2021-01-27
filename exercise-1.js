@@ -1,3 +1,13 @@
+
+
+
+//Hi Alex! I added a lot of white space to try to make it easier to read.
+//I also tried to comment out all global test console logs to try to make the console easier to read (like like 29)
+//I didn't comment out console logs within function/for loops!
+
+
+
+
 // ***For all the exercises, be sure to log the output of the function to the console.***
 
 /************************************************************************************/
@@ -18,16 +28,24 @@ function tekCamp() {
 }
 // tekCamp();
 
+
+
+
+
 /************************************************************************************/
 //Write a function that converts the current temperature from Fahrenheit to Celsius.
 
 //your code...
 function farenheitCelsius(farenheitTemp) {
   const celsiusTemp = (farenheitTemp - 32) / 1.8;
-  return celsiusTemp
+  return celsiusTemp;
 }
 
 // console.log(farenheitCelsius(212));
+
+
+
+
 /************************************************************************************/
 //Write a function that converts the Celsius temperature back to Fahrenheit.
 
@@ -38,6 +56,10 @@ function celsiusFarenheit(celsiusTemp) {
 }
 
 // console.log(farenheitCelsius(100));
+
+
+
+
 
 /************************************************************************************/
 // Write a function to determine if someone is old enough to vote.  The function should return a boolean of true or false.
@@ -53,6 +75,11 @@ function canVote(age) {
 
 // console.log(canVote(22));
 
+
+
+
+
+
 /************************************************************************************/
 // Write a function that converts a string to an array. It should return an array.
 
@@ -62,7 +89,11 @@ function strToArr(string) {
   return arr;
 }
 
-console.log(strToArr("Party"));
+// console.log(strToArr("Party"));
+
+
+
+
 
 /************************************************************************************/
 // Write a function that reverses your telephone number.  It should return the reversed telephone number.
@@ -82,6 +113,11 @@ function reversePhone(number) {
 
 // console.log(reversePhone(8323306225));
 
+
+
+
+
+
 /************************************************************************************/
 // Write a function that returns a car object using some given info about your car. Required inputs are the make, model, year, and color.
 
@@ -99,6 +135,11 @@ function yourCar(make, model, year, color) {
 }
 
 // console.log(yourCar("Hyundai", "Elantra", "2013", "red"))
+
+
+
+
+
 
 /************************************************************************************/
 // Write a function that accepts a list of numbers.  The function should identify each number as being even or odd.  The function should output a set of key value pairs, with the key being the number, and the value being the string "even" or "odd".
@@ -119,7 +160,13 @@ function oddOrEvenObject(...nums) {
   return numberObject;
 }
 
-console.log(oddOrEvenObject(10, 23, 3, 4));
+// console.log(oddOrEvenObject(10, 23, 3, 4));
+
+
+
+
+
+
 
 /************************************************************************************/
 const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -129,6 +176,12 @@ const numbers = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 for (let i = 0; i < numbers.length; i += 3) {
   console.log(numbers[i]);
 }
+
+
+
+
+
+
 
 /************************************************************************************/
 const foodArray = [
@@ -140,8 +193,12 @@ const foodArray = [
   "pudding",
   { program: "TEKcamp" },
 ];
+
 //access the value of the last element of the array and set it to a variable called school.  print the school variable to the console.
-const school = foodArray[foodArray.length - 1];
+let school;
+for (const [key, value] of Object.entries(foodArray[foodArray.length - 1])) {
+  school = value;
+}
 console.log(school);
 
 const adjectiveArray = [
@@ -153,6 +210,7 @@ const adjectiveArray = [
   "creamy",
   "amazing",
 ];
+
 // Using both the foodArray and the adjectiveArray, write "for" loop that console.log()'s a sentence for each corresponding value in the arrays. Add the word "is" or "are" depending on if the food is singular or plural.  i.e. "Potatoes are salty", "Lemon is sour".
 function printOut(valueCheck, indexItem, index) {
   if (valueCheck === "s") {
@@ -171,6 +229,12 @@ for (let i = 0; i < foodArray.length; i++) {
   }
 }
 
+
+
+
+
+
+
 /************************************************************* */
 // Refactor the for() loop to be a while loop.
 
@@ -186,21 +250,35 @@ while (i < 10) {
   i++;
 }
 
+
+
+
+
+
+
+
 /************************************************************* */
 //Multiply the sum of 30 added to two by 20.  Divide the product by 10 raised to the power of 2
 //use javascript to compute the value of the above statement. Each individual operation needs to be a function expression. run all the functions after defining them, and print the answer to the console.
 
 //your code...
 
-const firstNum = function () {
+const firstProduct = function () {
   return (30 + 2) * 20;
 };
 
-const secondNum = function (product) {
-  return (product / 10) ^ 2;
+const secondProduct = function (product) {
+  return (product / 10) ** 2;
 };
 
-console.log(secondNum(firstNum()));
+// console.log(secondProduct(firstProduct()));
+
+
+
+
+
+
+
 /************************************************************* */
 //Determine whether the following values are "truthy" or "falsy".  console.log() the value, whether the value is 'truthy' or 'falsy', along with your reasoning why using String interpolation values :
 
@@ -209,12 +287,12 @@ console.log(secondNum(firstNum()));
 // 20
 // 0
 // "zero";
-// const zero = 20; 
+// const zero = 20;
 // null
 // "0"
 // !""
 // {}
-// () => {console.log("hello TEKcamp!"); 
+// () => {console.log("hello TEKcamp!");
 // 125
 // undefined
 // ""
@@ -223,44 +301,49 @@ console.log(secondNum(firstNum()));
 // } else {
 //     console.log(false)
 // }
-//ANNA
 console.log(
   `${20} is truthy, because it is a number, and they are true in logical operations!`
 );
 console.log(
-  0 + " is falsy, because the number zero is defined as one of the falsy values"
+  `${0} is falsy, because the number zero is defined as one of the falsy values`
 );
 console.log(
-  "'zero'" +
-    " is truthy, because it is a string, and they are true in logical operations!"
-);
-console.log("const zero = 20 is an expression so it won't be returned truthy or falsey. The variable zero would be truthy since it is set to 20, and the number 20 is truthy")
-console.log(
-  null + " is falsy, because it is defined as one of the falsy values"
+  `${"zero"}"  is truthy, because it is a string, and they are true in logical operations!`
 );
 console.log(
-  "'0'" +
-    " is truthy, because it is a string, and they are true in logical operations!"
+  `const zero = 20 is an expression (so you also can't put it in a \${}!) so it won't be returned truthy or falsey. The variable zero would be truthy since it is set to 20, and the number 20 is truthy`
 );
 console.log(
-  '!""' +
-    " is truthy, because an empty string is falsey, so setting it with a bang (not) operator makes it true"
+  `${null} is falsy, because it is defined as one of the falsy values`
 );
 console.log(
-  "{}" +
-    " is truthy, because it is an empty object, and they are true in logical operations!"
-);
-console.log('() => {console.log("hello TEKcamp!"); returns an error so it is neither truthy or falsey.')
-console.log(
-  125 +
-    " is truthy, because it is a number, and they are true in logical operations!"
+  `${"0"}" is truthy, because it is a string, and they are true in logical operations!`
 );
 console.log(
-  undefined + " is falsy, because it is defined as one of the falsy values"
+  `${!""}' is truthy, because an empty string is falsey, so setting it with a bang (not) operator makes it true`
 );
 console.log(
-  '""' + " is falsy, because it is defined as one of the falsy values"
+  `${{}} is truthy, because it is an empty object, and they are true in logical operations!`
 );
+console.log(
+  `${() => {
+    console.log("hello TEKcamp!");
+  }}; is truthy because functions are truthy in logical operations.`
+);
+console.log(
+  `${125} is truthy, because it is a number, and they are true in logical operations!`
+);
+console.log(
+  `${undefined}  is falsy, because it is defined as one of the falsy values`
+);
+console.log(`${""} is falsy, because it is defined as one of the falsy values`);
+
+
+
+
+
+
+
 
 /************************************************************* */
 // Refactor the following code using a switch statement:
@@ -306,6 +389,13 @@ switch (day) {
     break;
 }
 
+
+
+
+
+
+
+
 /************************************************************* */
 // Refactor the following statements to use ternary expressions:
 
@@ -330,6 +420,13 @@ age > 21 ? console.log("adult") : console.log("minor");
 age > 13 && age < 19 ? console.log("teen") : console.log("not a teenager");
 
 age > 65 ? console.log("retired") : console.log("still working...");
+
+
+
+
+
+
+
 
 /************************************************************* */
 //Create an object literal representing yourself.  Set it equal to a variable that appropriately describes the object.  Include the following properties:
@@ -368,6 +465,13 @@ const myInfo = {
 // console.log(myInfo.yearsOld());
 /************************************************************* */
 
+
+
+
+
+
+
+
 {
   const year = 2021;
   const nums = [1, 2, 3, 4, 5];
@@ -378,10 +482,11 @@ const myInfo = {
   //Refactor the following statements into expressions
 
   // 1.
-  year > 2000 && year < 2100 ? console.log("welcome to the 21st century") : ""
   // if (year > 2000 && year < 2100) {
   //   console.log("welcome to the 21st century");
   // }
+
+  year > 2000 && year < 2100 ? console.log("welcome to the 21st century") : "";
 
   // 2.
   // for (let i = 0; i < nums.length; i++) {
@@ -400,9 +505,16 @@ const myInfo = {
 
   // console.log(doubled);
 
-  nums.forEach(x => doubled.push(x * 2));
-  console.log(doubled);
+  nums.forEach((x) => doubled.push(x * 2));
+  // console.log(doubled);
 }
+
+
+
+
+
+
+
 
 /************************************************************* */
 // Use array methods to solve the following problems.
@@ -413,7 +525,7 @@ const nums = [1, 2, 3, 4, 5];
 //your code...
 
 const squaredNums = nums.map((x) => x * x);
-console.log(squaredNums);
+// console.log(squaredNums);
 
 const fivePlus = [
   1,
@@ -451,7 +563,14 @@ const fivePlus = [
 
 //your code...
 const lessThanFive = fivePlus.filter((x) => x > 5);
-console.log(lessThanFive);
+// console.log(lessThanFive);
+
+
+
+
+
+
+
 
 // Create an array of 20 randomly generated integers.  Calculate the sum of the elements in the array.
 
@@ -462,11 +581,23 @@ for (let i = 0; i < 20; i++) {
   randomInts.push(randomInt);
 }
 
-console.log(randomInts.reduce((a, b) => a + b, 0));
+// console.log(randomInts.reduce((a, b) => a + b, 0));
+
+
+
+
 
 const showNums = [12, 22, 33, 44, 55, 66, 77, 88, 99, 101];
 //Print out the value of each number divided by 2.  There is no need to store the output in an array.
 showNums.forEach((x) => console.log(x / 2));
+
+
+
+
+
+
+
+
 
 /************************************************************* */
 /* Chess pieces have point values associated with them.  
@@ -508,7 +639,13 @@ function chessCalc(pieces) {
   }
   return points;
 }
-console.log(chessCalc(chessPiecesTest));
+// console.log(chessCalc(chessPiecesTest));
+
+
+
+
+
+
 
 /************************************************************* */
 
@@ -529,18 +666,31 @@ const newArray = [];
 for (let i = ones.length - 1; i > -1; i--) {
   newArray.push(ones[i]);
 }
-console.log(newArray);
+// console.log(newArray);
+
+
+
+
+
 
 /************************************************************* */
 //create a function called performer(cb) that takes in a callback function and runs that callback function.  The function should return the output of the callback function.
 
-function performer(cb) {
-  let anna = "This is my name"
-  cb(anna)
+function cb(name) {
+  return `My name is ${name}`;
 }
-console.log(performer);
+
+function performer(callback) {
+  return callback("anna");
+}
+// console.log(performer(cb));
 
 /************************************************************* */
+
+
+
+
+
 // For the given list of developers :
 const devs = [
   {
@@ -614,21 +764,21 @@ for (let i = 0; i < devs.length; i++) {
     olderDevs.push(devs[i]);
   }
 }
-console.log(olderDevs);
+// console.log(olderDevs);
 
 /************************** */
 // Remove all people who are not developers (i.e. no tech stack)
 
 //your code here...
 const developers = devs.filter((x) => x.tech_stack !== null);
-console.log(developers);
+// console.log(developers);
 
 /************************** */
 // Calculate the total age of all the devs
 
 //your code here...
 const totalAge = devs.reduce((a, b) => a + b.age, 0);
-console.log(totalAge);
+// console.log(totalAge);
 /************************** */
 // Find all female devs
 
@@ -636,7 +786,7 @@ console.log(totalAge);
 const femaleDevelopers = devs.filter(
   (x) => x.gender !== "m" && x.gender !== "M"
 );
-console.log(femaleDevelopers);
+// console.log(femaleDevelopers);
 
 /************************** */
 // lowercase the genders of every dev
@@ -649,7 +799,8 @@ for (let i = 0; i < devs.length; i++) {
     devs[i].gender = "f";
   }
 }
-console.log(devs);
+// console.log(devs);
+
 /************************** */
 // Sort the developers by name
 
@@ -666,7 +817,7 @@ const nameDevSort = devs.sort(function (a, b) {
   return 0;
 });
 
-console.log(nameDevSort);
+// console.log(nameDevSort);
 
 /************************** */
 // Sort the devs by age in descending order
@@ -687,7 +838,8 @@ function ageSort(obj) {
   });
   return ageDevSort;
 }
-console.log(ageSort(devs));
+// console.log(ageSort(devs));
+
 /************************** */
 // Sort the male coders by age
 
@@ -698,7 +850,7 @@ for (let i = 0; i < devs.length; i++) {
     maleDevs.push(devs[i]);
   }
 }
-console.log(ageSort(maleDevs));
+// console.log(ageSort(maleDevs));
 
 /************************** */
 // For the list of devs, print out sentences including the name and tech stack of each dev, leaving out other information.  Example output is provided below :
@@ -719,8 +871,21 @@ devs.forEach((dev) => {
 });
 
 /************************************************************* */
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Write a function to find the maximum numerical value of the given array.  Get rid of any non numerical values.  Convert the strings that are numbers to an actual number data type.  ("one" => 1) ("1" => 1).  Use array methods to perform this task.
-//I'm updating the actual array. It would be less code if I was making a new one with filter
+//I did this code both with a filter and a new array, and code that updates the given array.
 
 const numbersMixed = [
   2,
@@ -756,9 +921,55 @@ const numbersMixed = [
   [],
 ];
 
+//new array
+const numbersValues = numbersMixed.map((x) => {
+  switch (x) {
+    case "one":
+    case "1":
+      x = 1;
+      break;
+    case "two":
+    case "2":
+      x = 2;
+      break;
+    case "three":
+    case "3":
+      x = 3;
+      break;
+    case "four":
+    case "4":
+      x = 4;
+      break;
+    case "five":
+    case "5":
+      x = 5;
+      break;
+    case "six":
+    case "6":
+      x = 6;
+      break;
+    case "seven":
+    case "7":
+      x = 7;
+      break;
+    case "eight":
+    case "8":
+      x = 8;
+      break;
+    case "nine":
+    case "9":
+      x = 9;
+      break;
+  }
+  return x;
+});
+const onlyNumbers = numbersValues.filter((x) => typeof x === "number");
+// console.log(onlyNumbers);
+// end of newarray
+
+//Updating actual array
 function maxNumber(numbers) {
-    //your code...
-    const notANumber = [];
+  const notANumber = [];
   for (let i = 0; i < numbers.length; i++) {
     switch (numbers[i]) {
       case "one":
@@ -800,40 +1011,46 @@ function maxNumber(numbers) {
     }
   }
   for (let j = 0; j < numbers.length; j++) {
-    if (typeof numbers[j] !== "number"){
-        notANumber.push(numbers[j]);
+    if (typeof numbers[j] !== "number") {
+      notANumber.push(numbers[j]);
     }
   }
-  for (let k = 0; k < notANumber.length; k++){
-      let index = numbers.indexOf(notANumber[k]); 
-      if (index !== -1) {
-        numbers.splice(index, 1);
-      }
+  for (let k = 0; k < notANumber.length; k++) {
+    let index = numbers.indexOf(notANumber[k]);
+    if (index !== -1) {
+      numbers.splice(index, 1);
+    }
   }
   for (let t = 0; t < numbers.length; t++) {
     if (numbers[t] === undefined) {
-        numbers.splice(t, 1)
+      numbers.splice(t, 1);
     }
   }
 }
 
 maxNumber(numbersMixed);
-console.log(numbersMixed)
+// console.log(numbersMixed);
 
 //After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
 function sortNums(numbers, desc = false) {
   //your code...
   if (desc === false) {
-    numbers.sort((a, b) => a-b)
+    numbers.sort((a, b) => a - b);
   } else if (desc === true) {
-    numbers.sort((a, b) => b-a)
+    numbers.sort((a, b) => b - a);
   }
-  console.log(numbers)
-
+  console.log(numbers);
 }
 
-sortNums(numbersMixed, desc = false)
+sortNums(numbersMixed, (desc = false));
+
+
+
+
+
+
+
 
 /************************************************************* */
 //Research a new feature of ES6+ and create an example of it's use case here.  Be sure to write comments explaining what the feature is and why it is useful.
@@ -842,97 +1059,131 @@ sortNums(numbersMixed, desc = false)
 
 //ES6 came out with template literals, which is a new way to write strings using a backtick instead of single/double quotes. It cleans up concatination/interpolation.
 
-const yourName = "Alex Alspaw"
-const yourRole = "mentor"
+const yourName = "Alex Alspaw";
+const yourRole = "mentor";
 
-console.log(`${yourName} is a great ${yourRole}!`)
+console.log(`${yourName} is a great ${yourRole}!`);
 
 /************************************************************* */
+
+
+
+
+
+
+
 //Add an example of the 5 primary JavaScript data types to the given mapObj.  The key is an example data type, and the value is the name of the data type.  An object data type has already been set as the 1st key / val pair.
-//Anna
 const keyObj = {
-  company: "TEKsystems"
-}
+  company: "TEKsystems",
+};
 const mapObj = new Map();
 mapObj.set(keyObj, "object");
 mapObj.set(72, "number");
 mapObj.set("Party", "string");
 mapObj.set([1, 2, 3], "array");
 mapObj.set(true, "boolean");
-console.log(mapObj)
+console.log(mapObj);
 
-// console.log(mapObj.has( { company: "TEKsystems" }));
 console.log(mapObj.has(keyObj));
 
 //The above console.log() statment returns false.  Write another console.log() statement explaining why this line of code prints false.  Refactor the code `mapObj.set()`, so the code : `mapObj.has() returns true.  The goal is to successfully check and see if {company : "TEKsystems"} exists in the mapObj.
 
 //your code...
-console.log("The has returns false because objects need to be stored in objects, otherwise they are re-created each time they are called(or defined, depending on the fact that it is infact recreated).")
+console.log(
+  "The has returns false because objects need to be stored in objects, otherwise they are re-created each time they are called(or defined, depending on the fact that it is infact recreated)."
+);
 
 //loop through the mapObj and create a new array of only the data types, leaving out the example keys of the mapObj.  Use array methods to do this.  Example output : ['string',number','boolean',array','object']
+let objArray = [];
+
+const iterator = mapObj.values();
+console.log(mapObj.size);
+for (let i = 0; i < mapObj.size; i++) {
+  //my array method!
+  objArray.push(iterator.next().value);
+}
+
+// const objArrayFinal = mapObj[0].filter(x => objArray.push(x.value))
+// console.log(objArrayFinal);
+
+
+
+
+
 
 /************************************************************* */
 //Create 4 mathematical function expressions, add,subtract,multiply,divide.  put them in an array, and create a doMath() function that randomly selects one of the mathematical operations whenever it is invoked.  The doMath() function should print to the console the mathetmatical function that was carried out.  The doMath() function should return the computed value of any operation performed.
 
 // ex : 2,3 => doMath(2,3) => adding : 5
 function doMath(x, y) {
-   const operationIndex = Math.floor(Math.random() * operations.length);
-   console.log(operations[operationIndex])
-   console.log(operations[operationIndex](x, y));
+  const operationIndex = Math.floor(Math.random() * operations.length);
+  console.log(operations[operationIndex]);
+  console.log(operations[operationIndex](x, y));
 }
 
 //your code...
 
 const add = function (x, y) {
-    return x + y;
-}
+  return x + y;
+};
 
 const subtract = function (x, y) {
-    return x - y;
-}
+  return x - y;
+};
 
 const multiply = function (x, y) {
-    return x * y;
-}
+  return x * y;
+};
 
 const divide = function (x, y) {
-    return x / y;
-}
+  return x / y;
+};
 
 const operations = [add, subtract, multiply, divide];
-doMath(2, 3);
+// doMath(2, 3);
+
+
+
+
+
+
 
 /************************************************************* */
 //- Create a Higher Order Function called multiple(x) that takes a single parameter.  This HOF should return another function fn(y) that accepts another single parameter y.  This inner function should compute the product of it's parameter with the parameter passed into multiple.  Use this returned "first-class" function to compute triples of any given number.
 //your code...
-const multiple = x => {
-  const fn = y => y * x;
+const multiple = (x) => {
+  const fn = (y) => y * x;
   return fn(3);
-}
+};
 
-console.log(multiple(5))
+// console.log(multiple(5));
+
+
+
+
+
 
 //- Write an outer function called stockGain that has cost basis (basis) as a parameter; declare a variable called message that holds " is how much the stock has increased".  Return an inner function with years (yrs) as a parameter and declare a variable for growth rate (r) of 5%. Console log your calculation.
 
 //your code
-//ANNA HERE
-const stockGain = basis => {
+const stockGain = (basis) => {
   const message = " is how much the stock has increased";
-  const inner = yrs => {
-    const r = .05;
-    return yrs/r;
-  }
-  console.log((basis - inner(5)) + message);
-}
+  const inner = (yrs) => {
+    const r = 1.05;
+    return r ** yrs;
+  };
+  console.log(basis * inner(5) - basis + message);
+  return basis * inner(5);
+};
 
 // Once finished, declare a variable called futureValue that holds your stockGain function and enter any amount for the cost basis and a number for the number of years.  Run the function returned by the higher order function to display the future value of the stock.
 
 //your code...
-const futureValue = () => {
-  stockGain(5000);
-}
+const futureValue = stockGain(5000);
+// console.log(futureValue);
 
-futureValue()
+
+
 
 // DO NOT DELETE THIS EXPORT
 module.exports = {
@@ -942,7 +1193,12 @@ module.exports = {
   celsiusFarenheit,
   strToArr,
   reversePhone,
-  yourCar
+  yourCar,
+  oddOrEvenObject,
+  firstProduct,
+  secondProduct,
+  chessCalc,
+  ageSort,
 };
 
 //*************************************** */

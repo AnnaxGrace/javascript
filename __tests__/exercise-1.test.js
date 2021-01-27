@@ -143,9 +143,93 @@ describe("yourCar()", () => {
 
 })
 
+describe("oddOrEvenObject()", () => {
+
+    test("oddOrEvenObject() returns constructed object from given numbers, with their values stating if the key is 'even' or 'odd' ", () => {
+        const object = {
+            3: "odd",
+            4: "even",
+            10: "even",
+            23: "odd",
+        }
+        expect(exerciseOne.oddOrEvenObject(10, 23, 3, 4)).toEqual(object);
+    });
+
+})
 
 
+describe("firstProduct()", () => {
+
+    test("firstProduct() returns computation of (30 + 2) * 20", () => {
+        expect(exerciseOne.firstProduct()).toBe(640);
+    });
+
+})
 
 
+describe("secondProduct()", () => {
+
+    test("secondProduct() returns computation of (parameter/10) to the power of 2", () => {
+        expect(exerciseOne.secondProduct(640)).toBe(4096);
+    });
+
+})
+
+describe("chessCalc()", () => {
+
+    test("chessCalc() returns the sum of the point values of the array elements passed in", () => {
+        expect(exerciseOne.chessCalc(["king", "queen", "pawn", "pawn", "pawn", "bishop"])).toBe(15);
+    });
+
+})
+
+describe("ageSort()", () => {
+
+    test("ageSort() returns a sorted array by the age key in descending order", () => {
+        const objectArray = [
+            {
+              name: "Chris",
+              age: 102,
+              gender: "m",
+              tech_stack: ["react", "express", "python"],
+            },
+            {
+              name: "Rashid",
+              age: 27,
+              gender: "m",
+              tech_stack: ["thymeleaf", "postgres", "js", "Angular"],
+            },
+            {
+              name: "Mariam",
+              age: 32,
+              gender: "f",
+              tech_stack: null,
+            },
+        ]
+
+        const returnedObjectArray = [
+            {
+                name: "Chris",
+                age: 102,
+                gender: "m",
+                tech_stack: ["react", "express", "python"],
+              },
+              {
+                name: "Mariam",
+                age: 32,
+                gender: "f",
+                tech_stack: null,
+              },
+              {
+                name: "Rashid",
+                age: 27,
+                gender: "m",
+                tech_stack: ["thymeleaf", "postgres", "js", "Angular"],
+              },
+        ]
+        expect(exerciseOne.ageSort(objectArray)).toEqual(returnedObjectArray);
+    });
+
+})
 
 
