@@ -15,17 +15,20 @@
 //your code...
 function tekCamp() {
   for (let i = 1; i < 101; i++) {
+    let message = "";
     if (i % 3 === 0 && i % 5 !== 0) {
-      console.log("TEK");
+      message = "TEK";
     } else if (i % 5 === 0 && i % 3 !== 0) {
-      console.log("camp");
+      message = "camp";
     } else if (i % 3 === 0 && i % 5 === 0) {
-      console.log("TEKcamp");
+      message = "TEKcamp";
     } else {
-      console.log(i);
+      message = i;
     }
+    console.log(message);
   }
 }
+
 // tekCamp();
 
 
@@ -964,72 +967,75 @@ const numbersValues = numbersMixed.map((x) => {
   return x;
 });
 const onlyNumbers = numbersValues.filter((x) => typeof x === "number");
-// console.log(onlyNumbers);
+// console.log(Math.max(...onlyNumbers));
+
 // end of newarray
 
 //Updating actual array
-function maxNumber(numbers) {
+function maxNumber(array) {
   const notANumber = [];
-  for (let i = 0; i < numbers.length; i++) {
-    switch (numbers[i]) {
+  for (let i = 0; i < array.length; i++) {
+    switch (array[i]) {
       case "one":
       case "1":
-        numbers[i] = 1;
+        array[i] = 1;
         break;
       case "two":
       case "2":
-        numbers[i] = 2;
+        array[i] = 2;
         break;
       case "three":
       case "3":
-        numbers[i] = 3;
+        array[i] = 3;
         break;
       case "four":
       case "4":
-        numbers[i] = 4;
+        array[i] = 4;
         break;
       case "five":
       case "5":
-        numbers[i] = 5;
+        array[i] = 5;
         break;
       case "six":
       case "6":
-        numbers[i] = 6;
+        array[i] = 6;
         break;
       case "seven":
       case "7":
-        numbers[i] = 7;
+        array[i] = 7;
         break;
       case "eight":
       case "8":
-        numbers[i] = 8;
+        array[i] = 8;
         break;
       case "nine":
       case "9":
-        numbers[i] = 9;
+        array[i] = 9;
         break;
     }
   }
-  for (let j = 0; j < numbers.length; j++) {
-    if (typeof numbers[j] !== "number") {
-      notANumber.push(numbers[j]);
+  for (let j = 0; j < array.length; j++) {
+    if (typeof array[j] !== "number") {
+      notANumber.push(array[j]);
     }
   }
   for (let k = 0; k < notANumber.length; k++) {
-    let index = numbers.indexOf(notANumber[k]);
+    let index = array.indexOf(notANumber[k]);
     if (index !== -1) {
-      numbers.splice(index, 1);
+      array.splice(index, 1);
     }
   }
-  for (let t = 0; t < numbers.length; t++) {
-    if (numbers[t] === undefined) {
-      numbers.splice(t, 1);
+  for (let t = 0; t < array.length; t++) {
+    if (array[t] === undefined) {
+      array.splice(t, 1);
     }
   }
+  return Math.max(...numbersMixed)
 }
 
-maxNumber(numbersMixed);
-// console.log(numbersMixed);
+console.log(maxNumber(numbersMixed));
+
+
 
 //After the numbers array has been cleaned up to only have numbers in it, Write a function that sorts the modified numbers array.  Allow the function to sort the array in descending order as well.
 
@@ -1199,6 +1205,7 @@ module.exports = {
   secondProduct,
   chessCalc,
   ageSort,
+  maxNumber
 };
 
 //*************************************** */
