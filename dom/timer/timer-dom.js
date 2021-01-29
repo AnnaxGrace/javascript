@@ -8,7 +8,7 @@ let secondsLeft = 60;
 //start btn listener
 btnDiv.children[0].addEventListener("click", function () {
   //using the setInterval method to add functionality to our timer
-  var timerInterval = setInterval(function () {
+  let timerInterval = setInterval(function () {
     secondsLeft--;
     if (secondsLeft < 10) {
       countDown.textContent = "0:0" + secondsLeft;
@@ -24,6 +24,7 @@ btnDiv.children[0].addEventListener("click", function () {
 
   //stop btn listener
   btnDiv.children[1].addEventListener("click", function () {
+    console.log(timerInterval);
     clearInterval(timerInterval);
   });
 });

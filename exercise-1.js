@@ -1046,10 +1046,10 @@ function sortNums(numbers, desc = false) {
   } else if (desc === true) {
     numbers.sort((a, b) => b - a);
   }
-  console.log(numbers);
+  return numbers;
 }
 
-sortNums(numbersMixed, (desc = false));
+console.log(sortNums(numbersMixed, (desc = false)));
 
 
 
@@ -1124,7 +1124,7 @@ for (let i = 0; i < mapObj.size; i++) {
 function doMath(x, y) {
   const operationIndex = Math.floor(Math.random() * operations.length);
   console.log(operations[operationIndex]);
-  console.log(operations[operationIndex](x, y));
+  return operations[operationIndex](x, y);
 }
 
 //your code...
@@ -1157,8 +1157,8 @@ const operations = [add, subtract, multiply, divide];
 /************************************************************* */
 //- Create a Higher Order Function called multiple(x) that takes a single parameter.  This HOF should return another function fn(y) that accepts another single parameter y.  This inner function should compute the product of it's parameter with the parameter passed into multiple.  Use this returned "first-class" function to compute triples of any given number.
 //your code...
-const multiple = (x) => {
-  const fn = (y) => y * x;
+const multiple = x => {
+  const fn = y => y * x;
   return fn(3);
 };
 
@@ -1186,7 +1186,7 @@ const stockGain = (basis) => {
 
 //your code...
 const futureValue = stockGain(5000);
-// console.log(futureValue);
+console.log(futureValue);
 
 
 
@@ -1205,7 +1205,10 @@ module.exports = {
   secondProduct,
   chessCalc,
   ageSort,
-  maxNumber
+  maxNumber,
+  sortNums,
+  multiple,
+  stockGain
 };
 
 //*************************************** */

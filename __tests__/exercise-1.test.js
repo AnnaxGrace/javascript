@@ -245,6 +245,50 @@ describe("maxNumber()", () => {
   });
 });
 
+describe("sortNums()", () => {
+  test("sortNums() returns the array sorted by number, descending or ascending depending on the parameter", () => {
+    const testData1 = [
+      23,
+      20,
+      2000,
+      20000,
+      19999,
+      1878,
+      140,
+    ];
+    const testData2 = desc=true
+    const expected = [
+      20000,
+      19999,
+      2000,
+      1878,
+      140,
+      23,
+      20
+    ];
+    const actual = exerciseOne.sortNums(testData1, testData2);
+    expect(actual).toEqual(expected);
+  });
+});
+
+describe("multiple()", () => {
+  test("multiple() returns computes a paramater times its inner function's parameter", () => {
+    const testData = 5;
+    const expected = 15;
+    const actual = exerciseOne.multiple(testData);
+    expect(actual).toBe(expected);
+  });
+});
+
+describe("stockGain()", () => {
+  test("stockGain() returns the total of the stock after a set number of years", () => {
+    const testData = 5000;
+    const expected = 6381.4078125000015;
+    const actual = exerciseOne.stockGain(testData);
+    expect(actual).toBe(expected);
+  });
+});
+
 
 
 //next is sortNums
