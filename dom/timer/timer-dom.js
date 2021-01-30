@@ -26,10 +26,11 @@ btnDiv.children[0].addEventListener("click", function () {
   btnDiv.children[1].addEventListener("click", function () {
     clearInterval(timerInterval);
   });
-});
 
-//reset button listener
-btnDiv.children[2].addEventListener("click", function () {
-  countDown.textContent = "0:00";
-  secondsLeft = 60;
+  //reset button listener
+  btnDiv.children[2].addEventListener("click", function () {
+    clearInterval(timerInterval);
+    countDown.textContent = "0:00";
+    secondsLeft = 60;
+  });
 });
