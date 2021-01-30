@@ -24,7 +24,6 @@ btnDiv.children[0].addEventListener("click", function () {
 
   //stop btn listener
   btnDiv.children[1].addEventListener("click", function () {
-    console.log(timerInterval);
     clearInterval(timerInterval);
   });
 });
