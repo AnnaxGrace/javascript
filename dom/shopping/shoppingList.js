@@ -38,4 +38,42 @@
     
     
     
-    10. Finally, use the focus() method to focus the input element ready for entering the next shopping list item.
+    10. Finally, use the focus() method to focus the input element ready for entering the next shopping list item. */
+
+//1
+const ulEl = document.querySelector("ul");
+const inputEl = document.querySelector("input");
+const buttonEl = document.querySelector("button");
+
+//2
+buttonEl.addEventListener("click", function () {
+
+  //3
+  const inputEl = document.getElementById("item").value;
+
+  //4
+  document.getElementById("item").value = "";
+
+  //5
+  const liItem = document.createElement("li");
+  const spanTag = document.createElement("span");
+  const newButton = document.createElement("button");
+
+  //6
+  liItem.append(spanTag, newButton);
+
+  //7
+  spanTag.textContent = inputEl;
+  newButton.textContent = "Delete";
+
+  //8
+  ulEl.append(liItem);
+
+  //9
+  newButton.addEventListener("click", function () {
+    this.parentElement.remove();
+  });
+
+  //10
+  document.getElementById("item").focus();
+});
